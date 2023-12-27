@@ -27,19 +27,19 @@ body {
     /*background: linear-gradient(to bottom right, #8405d3, #050bac); */
     background-color: #344131;
     /*background-color: #040c15;*/
-    font-size: 14pt;
+    font-size: 18pt; /* Before: 14pt */
     color: #344131;
-    width: 90%; /* Stop horizontal overflow */
+    /*width: 90%; */ /* Stop horizontal overflow */
 }
 
 
 .background {
-    width: 600px; 
-    height: 450px; 
+    width: 750px; /* Before: 600px */
+    height: 500px; /* Before: 450px */
     position: fixed;
-    top: 53%; 
+    top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     margin: 0 auto;
     background-color:#fefae0;
     padding-bottom: 40px;
@@ -49,7 +49,7 @@ body {
 
 .pageTitle h2 {  /* Main page title*/
     font-family: "MM-Regular";
-    font-size: 32pt;
+    font-size: 36pt; /* Before: 32pt */
     width: 90%;
     vertical-align: top;
     margin-top: 20px;  /* Add separation from top of background box */
@@ -78,7 +78,7 @@ body {
 
 h4 {  /* Used for subtitles across pages */
     font-family: "MM-Regular";
-    font-size: 22pt;
+    font-size: 26pt; /* Before: 22pt */
     font-weight: normal;
     opacity: 1;
 }
@@ -104,7 +104,6 @@ nav a { /* Both external and internal links */
     text-align: center;
     vertical-align: center;
     font-family: "Source-Semi";
-    font-size: 14pt;
     text-decoration: none;  /* No underlining */
     /* border: 3px solid #73AD21; */ /* For visualizing placing */
 }
@@ -157,34 +156,34 @@ nav a:hover { /* When hovering over the page link */
     transform: translate(-50%, -50%);
 }
 
-.homepage div {
-    vertical-align: center; 
-    /*position: relative; 
-    top: 30px; */
+#homepagetext div {
+    float: left;
+    padding-left: 30px; 
 }
+
 
 .homepage h4 { /* Text: "Hi, my name is" */
     font-family: "Source-Semi";
     font-weight: normal;
-    font-size: 14pt;
+    font-size: 18pt; /* Before: 14pt */
     opacity: 90%;
     vertical-align: top;
     padding: 0;
     margin: 0;
     position: relative;
-    top: 10%;
+    top: 20px;
 }
 
 .homepage h1 { /* Text: "Joelene Hales" */
     font-weight:normal;
     font-family: "MM-Regular";
-    font-size: 50pt;
+    font-size: 70pt; /* Before: 50pt */
     vertical-align: top;
     padding: 0;
     margin: 0;
     position: relative;
-    top: 55px; /* Add a little bit of separation from the "Hi my name is */
-    line-height: 45pt; /* Decrease line separation */
+    top: 35px; /* Add a little bit of separation from the "Hi my name is */
+    line-height: 65pt; /* Decrease line separation. 45pt or 0.85em */
 }
 
 .homepage p { /* Homepage blurb */
@@ -193,12 +192,23 @@ nav a:hover { /* When hovering over the page link */
     padding: 0;
     margin: 0;
     position: relative;
-    top: 80px; /* Add a little separation from name */
+    top: 70px; /* Add a little separation from name (Contact comes with it) */
 }
 
-#headshot { /* Photograph on homepage */
-    height: 100%; 
-    width: 100%;
+#homepagetext a {
+    position: relative;
+    top: 45px;
+}
+
+#headshot div {
+    float: right;
+    padding-right: 30px;
+    margin: 0px;
+}
+
+#headshot img { /* Photograph on homepage */
+    float: right;
+    width: 82%;
 }
 
 /* Misc page links */
@@ -256,18 +266,18 @@ nav a:hover { /* When hovering over the page link */
 
 .experienceHeading h4 {  /* Job title */
     font-family: "MM-Regular";
-    font-size: 25pt;
+    font-size: 29pt; /* Before: 25pt */
     vertical-align: top;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
     padding-top: 0px;
-    line-height: 22pt;
+    line-height: 26pt;
 }
 
 .experienceHeading p {  /* Date */
     font-family: "Source-Semi";
-    font-size: 12pt;
+    font-size: 15pt; /* Before: 12pt */
     opacity: 45%;
     vertical-align: top;
     margin-top: 0px;
