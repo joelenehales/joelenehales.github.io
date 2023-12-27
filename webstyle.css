@@ -85,7 +85,16 @@ h4 {  /* Used for subtitles across pages */
 
 
 /* Navigation Bar */
-.navbar a { /* Both external and internal links */
+nav {
+    width: 93%;
+    position: fixed; /* Center horizontally */
+    left: 50%; 
+    transform: translateX(-50%);
+    margin: 0 auto;
+    overflow: hidden; /* No scroll */
+}
+
+nav a { /* Both external and internal links */
     color: #fff;
     padding-top: 20px;
     padding-bottom: 0px;
@@ -97,18 +106,30 @@ h4 {  /* Used for subtitles across pages */
     font-family: "Source-Semi";
     font-size: 14pt;
     text-decoration: none;  /* No underlining */
+    /* border: 3px solid #73AD21; */ /* For visualizing placing */
+}
+
+.extlink div {
+    position: relative;
+    left: 10px;
+}
+
+.intlink div {
+    position: relative;
+    right: 10px;
 }
 
 .intlink a {
     float: right;
 }
 
-.navbar a.active { /* When on the page */
+nav a:active { /* When on the page */
     opacity: 1;
 }
 
 
-.navbar a:hover { /* When hovering over the page link */
+nav a:hover { /* When hovering over the page link */
+    color: #fff;
     opacity: 1;
     fill-opacity: 1;
 }
@@ -173,6 +194,11 @@ h4 {  /* Used for subtitles across pages */
     margin: 0;
     position: relative;
     top: 80px; /* Add a little separation from name */
+}
+
+#headshot { /* Photograph on homepage */
+    height: 100%; 
+    width: 100%;
 }
 
 /* Misc page links */
