@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .background {
-    width: 65vw; /* Before: 600px, 750px */
+    width: 60vw; /* Before: 600px, 750px */
     height: calc(90vh - 60px); /* Before: 450px,500px */
     /* min-width: 600px; */
     /* min-height: 450px; */
@@ -40,7 +40,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(-50%, -50%);
     margin: auto;
     background-color:#fefae0;
-    /*padding-bottom: 40px;*/
     overflow: scroll;
 }
 
@@ -139,7 +138,7 @@ nav a:hover { /* When hovering over the page link */
 }
 
 .homepage-flex {
-    /*flex: 1 */ /* Makes both containers the same size */
+    flex: 1; /* Makes both containers the same size */
     /* border: 3px solid #73AD21; */ /* For visualizing placing */
     margin: 30px;
 }
@@ -190,8 +189,8 @@ nav a:hover { /* When hovering over the page link */
     opacity: 1;
     padding: 0;
     margin: 0;
-    /* color: #467dc4; */
     color: #554331;
+    fill: #554331;
     text-decoration: none; /* No underlining */
     transition: 0.1s ease-in; /* For arrow to move */
 }
@@ -200,8 +199,8 @@ nav a:hover { /* When hovering over the page link */
     opacity: 88%;
 }
 
-/* Make arrow move on hover */
-.background .button span {
+/* Make arrow move right on hover */
+.background .button span { /* Arrow icon */
     display: inline-block;
     vertical-align: center; 
 }
@@ -210,6 +209,19 @@ nav a:hover { /* When hovering over the page link */
     transform: translateX(15%);
 }
 
+.background .button svg { /* Link icon */
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    vertical-align: center;
+}
+
+/* Make links move up on hover
+.background .button:hover svg {
+    transform: translateY(-10%);
+}
+*/
+
 
 /* Experience page */
 .experienceItem {  /* Entire item */
@@ -217,6 +229,7 @@ nav a:hover { /* When hovering over the page link */
     position: relative;
     left: 35px;
     vertical-align: top;
+    padding-top: 20px;
 }
 
 .experienceItem p { /* Description */
