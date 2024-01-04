@@ -257,3 +257,59 @@ nav a:hover { /* When hovering over the page link */
     padding-bottom: 0px;
     padding-top: 4px;
 }
+
+
+/* Contact form */
+.contact-form {
+    border: 3px solid #73AD21; /* For visualizing placing */
+    margin: 0 30px; /* Top/bottom left/right */
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form input, textarea {
+    font-family: "Source-Semi";
+    font-weight: normal;
+    color: #344131; /* Font color */
+    font-size: 18pt; /* Same as body */
+    margin: 7px 0; /* Top/bottom left/right*/
+    width: 95%; /* Confine boxes to the div */
+    object-fit: contain;
+    opacity: 92%;
+    background-color: rgba(255, 255, 255, 0.80);
+    border-width: 2px;
+}
+
+.contact-form #submit {
+    width: auto;
+    color: #344131;
+    background-color: white;
+    /* Button stuff: */
+    align-self: center;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(52, 65, 49, 0.35) 2px 2px 1px;
+    /* Before: 15px 28px 25px -18px */
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: .75rem;
+    transition: all 235ms ease-in-out;
+    touch-action: manipulation;
+}
+
+
+.contact-form #submit:hover {
+  box-shadow: rgba(52, 65, 49, .4) 1px 1px; 
+  /* Before: 2px 8px 8px -5px; */
+  transform: translate3d(0, 2px, 0);
+}
+
+.contact-form #submit:focus {
+  box-shadow: rgba(33, 41, 31, 0.3) 1px 1px 1px; 
+  /* Before: 2px 8px 4px -6px; */
+}

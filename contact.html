@@ -41,11 +41,42 @@
         <section class="pageTitle">
             <h2> Contact </h2>
             <p> I'm currently open to new opportunities! 
-            <br> The best way to contact
+            <br> 
+            <!-- The best way to contact
             me is by email at 
-            <a href="mailto:joelenehales@bell.net"> joelenehales@bell.net </a>
+            <a href="mailto:joelenehales@bell.net"> joelenehales@bell.net </a> -->
             </p>
         </section>
+
+        <div class="contact-form">
+            <form method="POST" action="send-email.php">
+
+                <!-- <label for="name">Name</label> -->
+                <input type="text" id="name" name="name" placeholder="Name"
+                required> 
+                
+                <br>
+
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                
+                <br>
+
+                <!-- <label for="subject">Subject</label> -->
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                <br>
+
+                <!-- <label for="message">Message</label> -->
+                <textarea id="message" name="message" placeholder="Your message..." style="min-height:200px"></textarea>
+                
+                <br>
+
+                <input type="submit" id="submit" value="Send">
+
+            </form>
+
+        </div>
 
         <br>
         
