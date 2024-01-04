@@ -260,8 +260,10 @@ nav a:hover { /* When hovering over the page link */
 
 
 /* Contact form */
-.contact-form {
+.contact-form { 
+    position: absolute; /* Position relative to background div */
     margin: 0 30px; /* Top/bottom left/right */
+    width: calc(100% - 60px); /* Center with margin */
     display: flex;
     justify-content: space-between;
 }
@@ -273,10 +275,13 @@ nav a:hover { /* When hovering over the page link */
     font-size: 18pt; /* Same as body */
     margin: 7px 0; /* Top/bottom left/right*/
     width: 95%; /* Confine boxes to the div */
-    object-fit: contain;
     opacity: 92%;
     background-color: rgba(255, 255, 255, 0.80);
     border-width: 2px;
+}
+
+.contact-form textarea {
+    height: 200px;
 }
 
 .contact-form #submit {
