@@ -261,7 +261,6 @@ nav a:hover { /* When hovering over the page link */
 
 /* Contact form */
 .contact-form {
-    border: 3px solid #73AD21; /* For visualizing placing */
     margin: 0 30px; /* Top/bottom left/right */
     display: flex;
     justify-content: space-between;
@@ -312,4 +311,13 @@ nav a:hover { /* When hovering over the page link */
 .contact-form #submit:focus {
   box-shadow: rgba(33, 41, 31, 0.3) 1px 1px 1px; 
   /* Before: 2px 8px 4px -6px; */
+}
+
+#powered-by-unstatic {
+    font-size: 12pt;
+    position: absolute; /* Position to its parent (the background div )*/
+    bottom: 10px;
+    width: 100%; /* Required to center text */
+    margin: 0;
+    text-align: center;
 }
