@@ -1,15 +1,5 @@
 /* Define custom fonts */
 @font-face {
-    font-family: OPTIRomana;
-    src: url("./Fonts/OPTIRomanaRoman-Normal.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Lora;
-    src: url("./Fonts/Lora/Lora-VariableFont_wght.ttf") format("opentype");
-}
-
-@font-face {
     font-family: MM-Regular;
     src: url("./Fonts/MADEMirage-Medium/MADE Mirage Medium PERSONAL USE.otf") format("opentype");
 }
@@ -23,47 +13,51 @@
 /* General Website Style */
 body {
     font-family: "Source-Semi";
-    /* This is currently the best gradient I've found lol */
-    /*background: linear-gradient(to bottom right, #8405d3, #050bac); */
+    font-weight: normal;
     background-color: #344131;
-    /*background-color: #040c15;*/
+    color: #344131; /* Font color */
+    text-decoration: none;  /* No underlining */
     font-size: 18pt; /* Before: 14pt */
-    color: #344131;
-    /*width: 90%; */ /* Stop horizontal overflow */
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "MM-Regular";
+    font-weight: normal;
+    vertical-align: top;
+    position: relative;
 }
 
 
 .background {
-    width: 750px; /* Before: 600px */
-    height: 500px; /* Before: 450px */
+    width: 65vw; /* Before: 600px, 750px */
+    height: calc(90vh - 60px); /* Before: 450px,500px */
+    /* min-width: 600px; */
+    /* min-height: 450px; */
     position: fixed;
-    top: 50%; 
+    top: calc(50% + 30px); 
     left: 50%; 
-    transform: translate(-50%, -45%);
-    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    margin: auto;
     background-color:#fefae0;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
     overflow: scroll;
 }
 
 
 .pageTitle h2 {  /* Main page title*/
-    font-family: "MM-Regular";
     font-size: 36pt; /* Before: 32pt */
     width: 90%;
-    vertical-align: top;
     margin-top: 20px;  /* Add separation from top of background box */
     margin-bottom: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     position: relative;
     left: 20px;
-    font-weight: normal;
 }
 
 .pageTitle p {  /* Text under title */
     width: 90%;
-    vertical-align: top;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
@@ -71,15 +65,12 @@ body {
     position: relative;
     top: 4px;
     left: 30px;
-    font-weight: normal;
     opacity: 90%;
 }
 
 
 h4 {  /* Used for subtitles across pages */
-    font-family: "MM-Regular";
     font-size: 26pt; /* Before: 22pt */
-    font-weight: normal;
     opacity: 1;
 }
 
@@ -87,25 +78,34 @@ h4 {  /* Used for subtitles across pages */
 /* Navigation Bar */
 nav {
     width: 93%;
-    position: fixed; /* Center horizontally */
+    /* Center horizontally */
+    position: fixed; 
     left: 50%; 
     transform: translateX(-50%);
     margin: 0 auto;
     overflow: hidden; /* No scroll */
+    height: 60px;
+    text-decoration: none;  /* No underlining */
+    background-color: #344131;
 }
 
 nav a { /* Both external and internal links */
     color: #fff;
+    display: block; /* Prevent from being overlapped */
     padding-top: 20px;
     padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 10px;
     opacity: 85%;
     text-align: center;
-    vertical-align: center;
-    font-family: "Source-Semi";
     text-decoration: none;  /* No underlining */
     /* border: 3px solid #73AD21; */ /* For visualizing placing */
+}
+
+nav a:hover { /* When hovering over the page link */
+    color: white;
+    opacity: 1;
+    fill-opacity: 1;
 }
 
 .extlink div {
@@ -122,20 +122,9 @@ nav a { /* Both external and internal links */
     float: right;
 }
 
-nav a:active { /* When on the page */
-    opacity: 1;
-}
-
-
-nav a:hover { /* When hovering over the page link */
-    color: #fff;
-    opacity: 1;
-    fill-opacity: 1;
-}
-
 .extlink a {
     float: left;
-  }
+}
 
 .extlink svg { /* Logos linking to external websites */
     height: 25px;
@@ -144,106 +133,80 @@ nav a:hover { /* When hovering over the page link */
 }
 
 
-
 /* Homepage */
 .homepage {
-    width: 90%; 
-    margin: 0px auto; 
     display: flex;
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
 }
 
-#homepagetext div {
-    float: left;
-    padding-left: 30px; 
+.homepage-flex {
+    /*flex: 1 */ /* Makes both containers the same size */
+    /* border: 3px solid #73AD21; */ /* For visualizing placing */
+    margin: 30px;
 }
 
+.homepage-flex:last-child { /* Remove double-spacing caused by setting left/right margin on both flex elements */
+    margin-left: 0px;
+}
 
-.homepage h4 { /* Text: "Hi, my name is" */
+.homepage-flex h4 { /* Text: "Hi, my name is" */
     font-family: "Source-Semi";
-    font-weight: normal;
     font-size: 18pt; /* Before: 14pt */
     opacity: 90%;
-    vertical-align: top;
     padding: 0;
     margin: 0;
-    position: relative;
     top: 20px;
 }
 
-.homepage h1 { /* Text: "Joelene Hales" */
-    font-weight:normal;
-    font-family: "MM-Regular";
+.homepage-flex h1 { /* Text: "Joelene Hales" */
     font-size: 70pt; /* Before: 50pt */
-    vertical-align: top;
     padding: 0;
     margin: 0;
-    position: relative;
     top: 35px; /* Add a little bit of separation from the "Hi my name is */
-    line-height: 65pt; /* Decrease line separation. 45pt or 0.85em */
+    line-height: 65pt; /* Decrease line separation. Before: 45pt or 0.85em */
 }
 
-.homepage p { /* Homepage blurb */
+.homepage-flex p { /* Homepage blurb */
     opacity: 90%;
-    vertical-align: top;
     padding: 0;
     margin: 0;
     position: relative;
     top: 70px; /* Add a little separation from name (Contact comes with it) */
 }
 
-#homepagetext a {
+.homepage-flex a {
     position: relative;
     top: 45px;
 }
 
-#headshot div {
+.homepage-flex img { /* Photograph on homepage */
     float: right;
-    padding-right: 30px;
-    margin: 0px;
-}
-
-#headshot img { /* Photograph on homepage */
-    float: right;
-    width: 82%;
+    height: 100%; /* Make image fit in div and keep aspect ratio */
 }
 
 /* Misc page links */
 .background a {
-    opacity: 90%;
-    vertical-align: top;
+    opacity: 1;
     padding: 0;
     margin: 0;
     /* color: #467dc4; */
     color: #554331;
     text-decoration: none; /* No underlining */
-    transition: 0.1s ease-in;
+    transition: 0.1s ease-in; /* For arrow to move */
 }
 
 .background a:hover {
-    opacity: 1;
-    fill-opacity: 1;
+    opacity: 88%;
 }
-
 
 /* Make arrow move on hover */
 .background .button span {
     display: inline-block;
     vertical-align: center; 
-  }
+}
   
 .background .button:hover span {
     transform: translateX(15%);
 }
-
-/* Would keep this but it kind of looks wonky
-.background svg:hover{
-    transform: translateX(2px);
-}
-*/
 
 
 /* Experience page */
@@ -254,7 +217,6 @@ nav a:hover { /* When hovering over the page link */
     vertical-align: top;
 }
 
-
 .experienceItem p { /* Description */
     opacity: 85%;
     margin-top: 0px;
@@ -263,11 +225,8 @@ nav a:hover { /* When hovering over the page link */
     padding-top: 15px;
 }
 
-
 .experienceHeading h4 {  /* Job title */
-    font-family: "MM-Regular";
     font-size: 29pt; /* Before: 25pt */
-    vertical-align: top;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -276,10 +235,8 @@ nav a:hover { /* When hovering over the page link */
 }
 
 .experienceHeading p {  /* Date */
-    font-family: "Source-Semi";
     font-size: 15pt; /* Before: 12pt */
     opacity: 45%;
-    vertical-align: top;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
