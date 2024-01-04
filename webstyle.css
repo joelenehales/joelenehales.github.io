@@ -181,6 +181,8 @@ nav a:hover { /* When hovering over the page link */
 .homepage-flex img { /* Photograph on homepage */
     float: right;
     height: 100%; /* Make image fit in div and keep aspect ratio */
+    width: auto;
+    object-fit: contain; 
 }
 
 /* Misc page links */
