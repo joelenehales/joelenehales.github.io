@@ -261,27 +261,33 @@ nav a:hover { /* When hovering over the page link */
 
 /* Contact form */
 .contact-form { 
-    position: absolute; /* Position relative to background div */
-    margin: 0 30px; /* Top/bottom left/right */
-    width: calc(100% - 60px); /* Center with margin */
-    display: flex;
-    justify-content: space-between;
+    margin: 0 40px; /* Top/bottom left/right */
+    width: calc(100% - 80px); /* Center with margin */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.contact-form form {
+    width: 98%; /* Make form fill the div */
 }
 
 .contact-form input, textarea {
     font-family: "Source-Semi";
     font-weight: normal;
     color: #344131; /* Font color */
-    font-size: 18pt; /* Same as body */
-    margin: 7px 0; /* Top/bottom left/right*/
-    width: 95%; /* Confine boxes to the div */
+    font-size: 14pt;
+    margin: 3px 0; /* Top/bottom left/right*/
+    resize: none; /* Disable resizing */
+    object-fit: contain;
+    width: 98%;
     opacity: 92%;
     background-color: rgba(255, 255, 255, 0.80);
-    border-width: 2px;
+    border: 2px solid #344131;
 }
 
 .contact-form textarea {
-    height: 200px;
+    height: 150px;
+    margin-bottom: 0;
 }
 
 .contact-form #submit {
@@ -291,7 +297,6 @@ nav a:hover { /* When hovering over the page link */
     /* Button stuff: */
     align-self: center;
     background-position: 0 90%;
-    background-repeat: repeat no-repeat;
     background-size: 4px 3px;
     border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
     border-style: solid;
@@ -300,8 +305,6 @@ nav a:hover { /* When hovering over the page link */
     /* Before: 15px 28px 25px -18px */
     box-sizing: border-box;
     cursor: pointer;
-    display: inline-block;
-    padding: .75rem;
     transition: all 235ms ease-in-out;
     touch-action: manipulation;
 }
@@ -319,9 +322,10 @@ nav a:hover { /* When hovering over the page link */
 }
 
 #powered-by-unstatic {
-    font-size: 12pt;
-    position: absolute; /* Position to its parent (the background div )*/
-    bottom: 10px;
+    font-size: 11pt;
+    position: relative; /* Position to its parent (the background div )*/
+    bottom: 8px;
+    height: 20px;
     width: 100%; /* Required to center text */
     margin: 0;
     text-align: center;
