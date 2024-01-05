@@ -17,7 +17,7 @@ body {
     background-color: #344131;
     color: #344131; /* Font color */
     text-decoration: none;  /* No underlining */
-    font-size: 18pt; /* Before: 14pt */
+    font-size: 16pt; /* Before: 14pt */
     vertical-align: top;
 }
 
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .background {
     width: 60vw; /* Before: 600px, 750px */
-    height: calc(90vh - 60px); /* Before: 450px,500px */
+    height: calc(90vh - 50px); /* Before: 450px,500px */
     /* min-width: 600px; */
     /* min-height: 450px; */
     position: fixed;
@@ -56,14 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pageTitle p {  /* Text under title */
-    width: 90%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-    position: relative;
-    top: 4px;
-    left: 30px;
+    margin: 4px 30px; /* Top/bottom left/right*/
+    padding: 0;
     opacity: 90%;
 }
 
@@ -83,9 +77,8 @@ nav {
     transform: translateX(-50%);
     margin: 0 auto;
     overflow: hidden; /* No scroll */
-    height: 60px;
+    height: 50px;
     text-decoration: none;  /* No underlining */
-    background-color: #344131;
 }
 
 nav a { /* Both external and internal links */
@@ -138,18 +131,22 @@ nav a:hover { /* When hovering over the page link */
 }
 
 .homepage-flex {
-    flex: 1; /* Makes both containers the same size */
+    /* flex: 1; */ /* Makes both containers the same size */
     /* border: 3px solid #73AD21; */ /* For visualizing placing */
-    margin: 30px;
+    margin: 35px;
 }
 
 .homepage-flex:last-child { /* Remove double-spacing caused by setting left/right margin on both flex elements */
     margin-left: 0px;
 }
 
+.homepage-flex:first-child { /* Decrease margins between divs */
+    margin-right: 15px;
+}
+
 .homepage-flex h4 { /* Text: "Hi, my name is" */
     font-family: "Source-Semi";
-    font-size: 18pt; /* Before: 14pt */
+    font-size: 16pt; /* Before: 14pt */
     opacity: 90%;
     padding: 0;
     margin: 0;
@@ -196,7 +193,7 @@ nav a:hover { /* When hovering over the page link */
 }
 
 .background a:hover {
-    opacity: 88%;
+    opacity: 80%;
 }
 
 /* Make arrow move right on hover */
@@ -225,50 +222,55 @@ nav a:hover { /* When hovering over the page link */
 
 /* Experience page */
 .experienceItem {  /* Entire item */
-    width: 85%;
-    position: relative;
-    left: 35px;
+    margin: 0 40px; /* Top/bottom left/right */
     vertical-align: top;
-    padding-top: 20px;
+    transition: 28ms ease-in; /* For hover animation */
+}
+
+.experienceItem:hover h4 {
+    transform: scale(1.01);
 }
 
 .experienceItem p { /* Description */
     opacity: 85%;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 8px;
     padding-top: 15px;
 }
 
 .experienceHeading h4 {  /* Job title */
-    font-size: 29pt; /* Before: 25pt */
+    font-size: 27pt; /* Before: 25pt */
+    line-height: 24pt;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    line-height: 26pt;
+    padding: 0px;
+    align-self: center;
 }
 
 .experienceHeading p {  /* Date */
-    font-size: 15pt; /* Before: 12pt */
+    font-size: 14pt; /* Before: 12pt */
     opacity: 45%;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-bottom: 0px;
-    padding-top: 4px;
+    padding: 0px;
 }
 
 
 /* Contact form */
 .contact-form { 
-    margin: 0 40px; /* Top/bottom left/right */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     width: calc(100% - 80px); /* Center with margin */
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
 .contact-form form {
-    width: 98%; /* Make form fill the div */
+    width: 98%;
+    padding-bottom: 20px; /* Add padding the size of the "Powered by Un-static Forms" text to prevent it from overrunning it */
 }
 
 .contact-form input, textarea {
@@ -279,15 +281,14 @@ nav a:hover { /* When hovering over the page link */
     margin: 3px 0; /* Top/bottom left/right*/
     resize: none; /* Disable resizing */
     object-fit: contain;
-    width: 98%;
-    opacity: 92%;
+    width: 98%; /* Make fill the entire form width without cuttinh off border */
+    opacity: 90%;
     background-color: rgba(255, 255, 255, 0.80);
-    border: 2px solid #344131;
+    border: 1.5px solid #344131;
 }
 
 .contact-form textarea {
-    height: 150px;
-    margin-bottom: 0;
+    height: 125px;
 }
 
 .contact-form #submit {
@@ -299,8 +300,6 @@ nav a:hover { /* When hovering over the page link */
     background-position: 0 90%;
     background-size: 4px 3px;
     border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-    border-style: solid;
-    border-width: 2px;
     box-shadow: rgba(52, 65, 49, 0.35) 2px 2px 1px;
     /* Before: 15px 28px 25px -18px */
     box-sizing: border-box;
