@@ -30,10 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .background {
-    width: 60vw; /* Before: 600px, 750px */
-    height: calc(90vh - 50px); /* Before: 450px,500px */
-    /* min-width: 600px; */
-    /* min-height: 450px; */
+    width: 60vw;
+    min-width: 400px;
+    height: calc(90vh - 50px); 
     position: fixed;
     top: calc(50% + 30px); 
     left: 50%; 
@@ -128,21 +127,25 @@ nav a:hover { /* When hovering over the page link */
 /* Homepage */
 .homepage {
     display: flex;
-}
-
-.homepage-flex {
-    /* flex: 1; */ /* Makes both containers the same size */
-    /* border: 3px solid #73AD21; */ /* For visualizing placing */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Make image go above for narrow layouts (eg. mobile) */
     margin: 35px;
 }
 
-.homepage-flex:last-child { /* Remove double-spacing caused by setting left/right margin on both flex elements */
-    margin-left: 0px;
+.homepage-flex {
+    flex: 1;
 }
 
-.homepage-flex:first-child { /* Decrease margins between divs */
-    margin-right: 15px;
+.homepage-flex:first-child {
+    min-width: 50%;
+    padding-bottom: 60px; /* Prevent text from running into image on wrap. Amount was just eye-balled */
+    padding-right: 12px; /* Ensures some space between text and image without noticably affecting the wrapped look */
 }
+
+.homepage-flex:last-child {
+    margin: 0;
+}
+
 
 .homepage-flex h4 { /* Text: "Hi, my name is" */
     font-family: "Source-Semi";
@@ -175,10 +178,15 @@ nav a:hover { /* When hovering over the page link */
 }
 
 .homepage-flex img { /* Photograph on homepage */
-    float: right;
-    height: 100%; /* Make image fit in div and keep aspect ratio */
-    width: auto;
+    justify-content: center;
+    max-height: calc(89vh - 120px); /* Make image fit in div and keep aspect
+    ratio */
+    max-width: 57vw; /* Necessary so image width doesn't exceed background on mobile */
     object-fit: contain; 
+    position: relative; /* Center image within its div */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }
 
 /* Misc page links */
@@ -227,9 +235,11 @@ nav a:hover { /* When hovering over the page link */
     transition: 28ms ease-in; /* For hover animation */
 }
 
+/* I don't like the way this looks yet
 .experienceItem:hover h4 {
     transform: scale(1.01);
 }
+*/
 
 .experienceItem p { /* Description */
     opacity: 85%;
