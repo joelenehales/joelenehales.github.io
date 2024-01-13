@@ -132,61 +132,56 @@ nav a:hover { /* When hovering over the page link */
     margin: 35px;
 }
 
-.homepage-flex {
-    flex: 1;
-}
-
-.homepage-flex:first-child {
-    min-width: 50%;
-    padding-bottom: 60px; /* Prevent text from running into image on wrap. Amount was just eye-balled */
-    padding-right: 12px; /* Ensures some space between text and image without noticably affecting the wrapped look */
-}
-
-.homepage-flex:last-child {
-    margin: 0;
+.homepage div {
+    flex: 1;  /* Ensures the text and image columns are the same width */
 }
 
 
-.homepage-flex h4 { /* Text: "Hi, my name is" */
+.homepage .text div {
+    float: center;
+    position: relative; /* Center all text vertically within its div */
+    top: 50%; 
+    transform: translateY(-50%);
+    margin-right: 10px; /* Ensures some space between text and image without noticably affecting the wrapped look */
+    margin-bottom: 50px;  /* Prevent image from running into text on wrap */
+}
+
+
+.homepage .text h4 { /* Text: "Hi, my name is" */
     font-family: "Source-Semi";
     font-size: 16pt; /* Before: 14pt */
     opacity: 90%;
-    padding: 0;
     margin: 0;
-    top: 20px;
+    margin-left: 8px; /* Add a little indent */
 }
 
-.homepage-flex h1 { /* Text: "Joelene Hales" */
+.homepage .text h1 { /* Text: "Joelene Hales" */
     font-size: 70pt; /* Before: 50pt */
-    padding: 0;
-    margin: 0;
-    top: 35px; /* Add a little bit of separation from the "Hi my name is */
     line-height: 65pt; /* Decrease line separation. Before: 45pt or 0.85em */
-}
-
-.homepage-flex p { /* Homepage blurb */
-    opacity: 90%;
-    padding: 0;
     margin: 0;
-    position: relative;
-    top: 70px; /* Add a little separation from name (Contact comes with it) */
+    margin-bottom: 22px; /* Add some separation between name and the homepage text */
 }
 
-.homepage-flex a {
-    position: relative;
-    top: 45px;
+.homepage .text p { /* Homepage blurb */
+    opacity: 90%;
+    margin: 0;
 }
 
-.homepage-flex img { /* Photograph on homepage */
+.homepage .text a {
+    margin: 0;
+}
+
+.homepage .image img { /* Photograph on homepage */
     justify-content: center;
-    max-height: calc(89vh - 120px); /* Make image fit in div and keep aspect
+    max-height: calc(90vh - 140px); /* Make image fit in div and keep aspect
     ratio */
-    max-width: 57vw; /* Necessary so image width doesn't exceed background on mobile */
+    max-width: 52vw; /* Necessary so image width doesn't exceed background on mobile */
     object-fit: contain; 
     position: relative; /* Center image within its div */
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 /* Misc page links */
