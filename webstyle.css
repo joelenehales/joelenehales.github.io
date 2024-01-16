@@ -69,13 +69,13 @@ h4 {  /* Used for subtitles across pages */
 
 /* Navigation Bar */
 nav {
-    width: 93%;
+    width: 95%;
     /* Center horizontally */
     position: fixed; 
     left: 50%; 
     transform: translateX(-50%);
     margin: 0 auto;
-    overflow: hidden; /* No scroll */
+    overflow-y: hidden; /* No scroll */
     height: 50px;
     text-decoration: none;  /* No underlining */
 }
@@ -90,7 +90,6 @@ nav a { /* Both external and internal links */
     opacity: 85%;
     text-align: center;
     text-decoration: none;  /* No underlining */
-    /* border: 3px solid #73AD21; */ /* For visualizing placing */
 }
 
 nav a:hover { /* When hovering over the page link */
@@ -118,8 +117,8 @@ nav a:hover { /* When hovering over the page link */
 }
 
 .extlink svg { /* Logos linking to external websites */
-    height: 25px;
-    width: 25px;
+    height: 24px;
+    width: 24px;
     fill: #fff;
 }
 
@@ -327,10 +326,107 @@ nav a:hover { /* When hovering over the page link */
 
 #powered-by-unstatic {
     font-size: 11pt;
-    position: relative; /* Position to its parent (the background div )*/
+    position: fixed; /* Position to its parent (the background div )*/
     bottom: 8px;
     height: 20px;
     width: 100%; /* Required to center text */
     margin: 0;
     text-align: center;
+}
+
+/* Projects section */
+.project {  /* Container for each project */
+    display: flex;
+    /* Alternative: * Does not work with the Current Work-In-Progress being at
+the top
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Column ratios (Text column 2x larger than
+    image)
+    */
+    margin: 25px 35px; /* Top/bottom left/right */
+}
+
+
+.project .in-progress { /* Current work-in-progress project (at the top, no image) */
+    display: block;
+    margin: 0px 25px;  /* Indent slightly from the rest of the content */
+}
+
+.project .text {
+    margin-left: 11px;
+}
+
+.project .image {
+    margin-right: 11px;
+}
+
+.project h6 { /* "Featured Project" / "Current Project" */
+    margin: 0;
+    font-size: 14pt;
+    font-family: "Source-Semi";
+}
+
+.project h4 { /* Project name */
+    margin: 0;
+}
+
+.project p {  /* Project description */
+    margin: 0;
+    opacity: 85%
+}
+
+.project .title {  /* Container for project name and links */
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.project .title svg {  /* GitHub/PyPI links */
+    height: 32px;
+    width: 32px;
+    padding: 0 5px;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.project ul { /* The list of languages/skills used in each project */
+    margin: 0 15px; /* Keep it contained slightly within the edge of the other text */
+    margin-top: 8px; /* Displaced slightly from description text */
+    list-style-type: none; /* Remove the bullet points */
+    padding-left: 0; /* Remove the indentation for each item by default */
+    /*justify-content: center;  /* Center items */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project li {  /* Each language/tool */
+    font-size: 14pt;
+    margin: 0 2px; /* Add spacing between items */
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(52, 65, 49, 0.15);;
+}
+
+.project .image img {
+    margin: 0;
+    position: relative; /* Center horizontally within its div */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7px; /* Add a bit of separation from the top, make align with top of title */
+    max-width: 15vw;
+    filter: grayscale(100%);
+    transition: 0.05s ease-in; /* For transition to colour on hover */
+    opacity: 1;
+}
+
+.project .image img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+#featured .image img {  /* Image for featured project */
+    position: relative;
+    top: calc(12px + 14pt);  /* Add extra spacing to align with top of title instead of "Featured Project" text */
 }
