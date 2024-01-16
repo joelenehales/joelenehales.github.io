@@ -10,7 +10,9 @@
 }
 
 
-/* General Website Style */
+/****************************
+ *  General Website Styles  *
+ ****************************/
 body {
     font-family: "Source-Semi";
     font-weight: normal;
@@ -42,32 +44,66 @@ h1, h2, h3, h4, h5, h6 {
     overflow: scroll;
 }
 
-
-.pageTitle h2 {  /* Main page title*/
-    font-size: 36pt; /* Before: 32pt */
-    width: 90%;
-    margin-top: 20px;  /* Add separation from top of background box */
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+.page-title { /* Container for page title and description text  */
     position: relative;
-    left: 20px;
+    margin: 25px 35px 0;  /* Add separation from top of background box */
 }
 
-.pageTitle p {  /* Text under title */
-    margin: 4px 30px; /* Top/bottom left/right*/
+.page-title h2 {  /* Main page titles */
+    font-size: 36pt; /* Before: 32pt */
+    width: 90%;
+    margin: 0;  
+    padding: 0;
+}
+
+.page-title p {  /* Text under title */
+    margin: 0 10px; /* Top/bottom left/right*/
     padding: 0;
     opacity: 90%;
 }
 
 
-h4 {  /* Used for subtitles across pages */
-    font-size: 26pt; /* Before: 22pt */
+/* General Links */
+.background a {
     opacity: 1;
+    padding: 0;
+    margin: 0;
+    color: #554331;
+    fill: #554331;
+    text-decoration: none; /* No underlining */
+    transition: 0.1s ease-in; /* For arrow to move */
+}
+
+.background a:hover {
+    opacity: 80%;
+}
+
+/* Make arrow move right on hover */
+.background .button span { /* Arrow icon */
+    display: inline-block;
+    vertical-align: center; 
+}
+  
+.background .button:hover span {
+    transform: translateX(15%);
+}
+
+.background .button svg { /* Link icon */
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    vertical-align: center;
+}
+
+/* Make links move up on hover
+.background .button:hover svg {
+    transform: translateY(-10%);
 }
 
 
-/* Navigation Bar */
+/********************
+ *  Navigation Bar  *
+ ********************/
 nav {
     width: 95%;
     /* Center horizontally */
@@ -123,7 +159,10 @@ nav a:hover { /* When hovering over the page link */
 }
 
 
-/* Homepage */
+
+/******************
+ *    Homepage    *
+ ******************/
 .homepage {
     display: flex;
     justify-content: space-around;
@@ -150,8 +189,7 @@ nav a:hover { /* When hovering over the page link */
     font-family: "Source-Semi";
     font-size: 16pt; /* Before: 14pt */
     opacity: 90%;
-    margin: 0;
-    margin-left: 8px; /* Add a little indent */
+    margin: 0 8px 12px; /* Add a little indent + separation from "Joelene Hales" */
 }
 
 .homepage .text h1 { /* Text: "Joelene Hales" */
@@ -163,11 +201,11 @@ nav a:hover { /* When hovering over the page link */
 
 .homepage .text p { /* Homepage blurb */
     opacity: 90%;
-    margin: 0;
+    margin: 0 8px;
 }
 
 .homepage .text a {
-    margin: 0;
+    margin: 0 8px;
 }
 
 .homepage .image img { /* Photograph on homepage */
@@ -183,48 +221,16 @@ nav a:hover { /* When hovering over the page link */
     margin: 0;
 }
 
-/* Misc page links */
-.background a {
-    opacity: 1;
-    padding: 0;
-    margin: 0;
-    color: #554331;
-    fill: #554331;
-    text-decoration: none; /* No underlining */
-    transition: 0.1s ease-in; /* For arrow to move */
-}
 
-.background a:hover {
-    opacity: 80%;
-}
-
-/* Make arrow move right on hover */
-.background .button span { /* Arrow icon */
-    display: inline-block;
-    vertical-align: center; 
-}
-  
-.background .button:hover span {
-    transform: translateX(15%);
-}
-
-.background .button svg { /* Link icon */
-    height: 15px;
-    width: 15px;
-    display: inline-block;
-    vertical-align: center;
-}
-
-/* Make links move up on hover
-.background .button:hover svg {
-    transform: translateY(-10%);
-}
-*/
-
-
-/* Experience page */
-.experienceItem {  /* Entire item */
-    margin: 0 40px; /* Top/bottom left/right */
+/*********************
+ *  Experience Page  *
+ *********************/
+.experience {  /* Entire experience item */
+    margin: 25px 40px; /* Top/bottom left/right */
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: none;
+    border-radius: 10px;
     vertical-align: top;
     transition: 28ms ease-in; /* For hover animation */
 }
@@ -235,33 +241,39 @@ nav a:hover { /* When hovering over the page link */
 }
 */
 
-.experienceItem p { /* Description */
+.experience p { /* Description */
     opacity: 85%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 8px;
-    padding-top: 15px;
+    margin: 0;
+    padding: 15px 0 8px;  /* Top left/right botttom */
 }
 
-.experienceHeading h4 {  /* Job title */
+.experience .title h4 {  /* Job title */
     font-size: 27pt; /* Before: 25pt */
     line-height: 24pt;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     align-self: center;
 }
 
-.experienceHeading p {  /* Date */
+.experience .title p {  /* Date */
     font-size: 14pt; /* Before: 12pt */
     opacity: 45%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.experience a { /* Links */
+    margin: 20px 2px 0; /* Add spacing between items */
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(85, 67, 49, 0.15);
 }
 
 
-/* Contact form */
+/******************
+ *  Contact Page  *
+ ******************/
 .contact-form { 
     margin-top: 20px;
     margin-bottom: 10px;
@@ -334,7 +346,10 @@ nav a:hover { /* When hovering over the page link */
     text-align: center;
 }
 
-/* Projects section */
+
+/*******************
+ *  Projects Page  *
+ *******************/
 .project {  /* Container for each project */
     display: flex;
     /* Alternative: * Does not work with the Current Work-In-Progress being at
@@ -344,6 +359,10 @@ the top
     image)
     */
     margin: 25px 35px; /* Top/bottom left/right */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: none;
+    border-radius: 10px;
 }
 
 
@@ -368,6 +387,7 @@ the top
 
 .project h4 { /* Project name */
     margin: 0;
+    font-size: 26pt;
 }
 
 .project p {  /* Project description */
@@ -406,7 +426,7 @@ the top
     padding: 5px 15px;
     border: none;
     border-radius: 20px;
-    background: rgba(52, 65, 49, 0.15);;
+    background: rgba(52, 65, 49, 0.15);
 }
 
 .project .image img {
