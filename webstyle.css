@@ -233,6 +233,7 @@ nav a:hover { /* When hovering over the page link */
     border-radius: 10px;
     vertical-align: top;
     transition: 28ms ease-in; /* For hover animation */
+    display: flex;
 }
 
 /* I don't like the way this looks yet
@@ -268,6 +269,40 @@ nav a:hover { /* When hovering over the page link */
     border: none;
     border-radius: 20px;
     background: rgba(85, 67, 49, 0.15);
+}
+
+#PAHs-graphic {
+    margin-right: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* Applies to the path, line, and polygon of all PAH SVGs */
+    stroke: #344131;
+    fill: none;
+    stroke-opacity: 1;
+}
+
+#PAH-1 {
+    margin: 0;
+    width: 160px;
+    stroke-width: 10;
+    transform: rotateX(180deg) rotate(345deg);
+}
+
+#PAH-2 {
+    margin: 0;
+    stroke-width: 14;
+    width: 55px;
+    transform: rotate(35deg) translate(-10px, -20px);
+}
+
+#PAH-3 {
+    margin: 0;
+    stroke-width: 2.5;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    width: 100px;
+    transform: rotate(160deg);
 }
 
 
