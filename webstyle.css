@@ -225,10 +225,15 @@ nav a:hover { /* When hovering over the page link */
 /*********************
  *  Experience Page  *
  *********************/
-.experience {  /* Entire experience item */
+#experience-page {  /* Entire experience page*/
+    overflow-x: hidden;  /* To make the galaxy look nice*/
+}
+
+.experience {  /* Each experience item */
     margin: 25px 40px; /* Top/bottom left/right */
     padding: 25px;
-    /*background-color: rgba(255, 255, 255, 0.45);*/    border: none;
+    /*background-color: rgba(255, 255, 255, 0.45);*/ 
+    border: none;
     border-radius: 10px;
     vertical-align: top;
     transition: 28ms ease-in; /* For hover animation */
@@ -268,7 +273,7 @@ nav a:hover { /* When hovering over the page link */
     background: rgba(85, 67, 49, 0.15);
 }
 
-#PAHs-graphic {
+#astrochemistry .graphic {
     margin-left: 0;
     margin-right: 20px;
     margin-top: 30px;
@@ -276,7 +281,7 @@ nav a:hover { /* When hovering over the page link */
     display: flex;
     flex-direction: column;
     /* Applies to the path, line, and polygon of all PAH SVGs */
-    stroke: #344131;
+    stroke: #344131a3;
     fill: none;
     stroke-opacity: 1;
 }
@@ -328,9 +333,23 @@ nav a:hover { /* When hovering over the page link */
 #galactic-astronomy .graphic svg {
     margin: 0;
     width: 500px;
-    transform: rotate(345deg); /* Rotate it within its div, not the entire div itself */
+    transform: rotate(345deg);  /* Rotate galaxy within its div, not the entire div itself */
     position: absolute;
     right: -70px;
+}
+
+#exoplanet-astronomy .graphic {
+    fill: #34413155;
+    margin: 0;
+    stroke-width: 5;
+    width: 25%;
+}
+
+#exoplanet-astronomy .graphic svg {
+    width: 250px;
+    position: absolute;
+    transform: rotate(-15deg);
+    left: 30px;
 }
 
 
@@ -423,7 +442,7 @@ the top
     */
     margin: 25px 35px; /* Top/bottom left/right */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.45);
+    /*background-color: rgba(255, 255, 255, 0.45);*/
     border: none;
     border-radius: 10px;
 }
