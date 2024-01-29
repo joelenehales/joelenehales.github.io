@@ -66,10 +66,10 @@ h1, h2, h3, h4, h5, h6 {
 /* General Links */
 .background a {
     opacity: 1;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
-    color: #554331;
-    fill: #554331;
+    color: #344131;
+    fill: #344131;
     text-decoration: none; /* No underlining */
     transition: 0.1s ease-in; /* For arrow to move */
 }
@@ -244,10 +244,10 @@ nav a:hover { /* When hovering over the page link */
     width: 75%;
 }
 
-.experience p { /* Description */
+.experience .text p { /* Description */
     opacity: 85%;
     margin: 0;
-    padding: 15px 0 8px;  /* Top left/right botttom */
+    padding: 8px 0 13px;
 }
 
 .experience .title h4 {  /* Job title */
@@ -258,11 +258,12 @@ nav a:hover { /* When hovering over the page link */
     align-self: center;
 }
 
-.experience .title p {  /* Date */
+.experience .title span {  /* Date */
     font-size: 14pt; /* Before: 12pt */
     opacity: 45%;
     margin: 0;
     padding: 0;
+    padding-bottom: 8px;
 }
 
 .experience a { /* Links */
@@ -381,8 +382,8 @@ nav a:hover { /* When hovering over the page link */
     object-fit: contain;
     width: 98%; /* Make fill the entire form width without cuttinh off border */
     opacity: 90%;
-    background-color: rgba(255, 255, 255, 0.80);
-    border: 1.5px solid #344131;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1.35px solid #344131d6;
 }
 
 .contact-form textarea {
@@ -392,7 +393,7 @@ nav a:hover { /* When hovering over the page link */
 .contact-form #submit {
     width: auto;
     color: #344131;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.80);
     /* Button stuff: */
     align-self: center;
     background-position: 0 90%;
@@ -441,16 +442,15 @@ the top
     image)
     */
     margin: 25px 35px; /* Top/bottom left/right */
-    padding: 20px;
+    padding: 10px;
     /*background-color: rgba(255, 255, 255, 0.45);*/
     border: none;
-    border-radius: 10px;
 }
 
 
 .project .in-progress { /* Current work-in-progress project (at the top, no image) */
     display: block;
-    margin: 0px 25px;  /* Indent slightly from the rest of the content */
+    /*margin: 0px 25px;  /* Indent slightly from the rest of the content */
 }
 
 .project .text {
@@ -493,8 +493,7 @@ the top
 }
 
 .project ul { /* The list of languages/skills used in each project */
-    margin: 0 15px; /* Keep it contained slightly within the edge of the other text */
-    margin-top: 8px; /* Displaced slightly from description text */
+    margin: 8px 15px 0; /* Keep it contained slightly within the edge of the other text, displaced slightly from description text */
     list-style-type: none; /* Remove the bullet points */
     padding-left: 0; /* Remove the indentation for each item by default */
     /*justify-content: center;  /* Center items */
@@ -504,7 +503,7 @@ the top
 
 .project li {  /* Each language/tool */
     font-size: 14pt;
-    margin: 0 2px; /* Add spacing between items */
+    margin: 2px; /* Add spacing between items */
     padding: 5px 15px;
     border: none;
     border-radius: 20px;
