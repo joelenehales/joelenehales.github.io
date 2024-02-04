@@ -272,6 +272,11 @@ nav a:hover { /* When hovering over the page link */
     border: none;
     border-radius: 20px;
     background: rgba(85, 67, 49, 0.15);
+    opacity: 85%;
+}
+
+.experience a:hover {
+    opacity: 70%;
 }
 
 #astrochemistry .graphic {
@@ -441,14 +446,14 @@ the top
     grid-template-columns: 1fr 2fr; /* Column ratios (Text column 2x larger than
     image)
     */
-    margin: 25px 35px; /* Top/bottom left/right */
+    margin: 10px 35px; /* Top/bottom left/right */
     padding: 10px;
     /*background-color: rgba(255, 255, 255, 0.45);*/
     border: none;
 }
 
 
-.project .in-progress { /* Current work-in-progress project (at the top, no image) */
+.project .in-progress {  /* Current work-in-progress project (at the top, no image) */
     display: block;
     /*margin: 0px 25px;  /* Indent slightly from the rest of the content */
 }
@@ -474,7 +479,7 @@ the top
 
 .project p {  /* Project description */
     margin: 0;
-    opacity: 85%
+    opacity: 88%
 }
 
 .project .title {  /* Container for project name and links */
@@ -485,9 +490,9 @@ the top
 
 
 .project .title svg {  /* GitHub/PyPI links */
-    height: 32px;
-    width: 32px;
-    padding: 0 5px;
+    height: 25px;
+    width: 25px;
+    padding: 0 3px;
     vertical-align: bottom;
     margin: 0;
 }
@@ -508,6 +513,7 @@ the top
     border: none;
     border-radius: 20px;
     background: rgba(52, 65, 49, 0.15);
+    opacity: 82%;
 }
 
 .project .image img {
