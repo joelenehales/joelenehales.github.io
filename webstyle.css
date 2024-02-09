@@ -201,7 +201,7 @@ nav a:hover { /* When hovering over the page link */
 
 .homepage .text p { /* Homepage blurb */
     opacity: 90%;
-    margin: 0 8px;
+    margin: 0 8px 5px;
 }
 
 .homepage .text a {
@@ -486,14 +486,13 @@ the top
     margin: 0;
     display: flex;
     justify-content: space-between;
+    align-content: bottom;
 }
 
-
-.project .title svg {  /* GitHub/PyPI links */
-    height: 25px;
+.project .title svg {  /* GitHub/PyPI/Web App links */
     width: 25px;
+    height: 100%;
     padding: 0 3px;
-    vertical-align: bottom;
     margin: 0;
 }
 
